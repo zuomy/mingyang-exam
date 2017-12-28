@@ -1,0 +1,12 @@
+<h1>品牌  列表</h1>
+<button style="background:#ffccbc;color:red;border-radius:5px;font-weight:bold" (click)="sortUsers('asc')">正序</button>
+<button style="background:#ffccbc;color:red;border-radius:5px;font-weight:bold" (click)="sortUsers('desc')" >倒序</button>
+<button style="background:#ffccbc;color:red;border-radius:5px;font-weight:bold"(click)="mySort()">随机</button>
+<button style="background:#ffccbc;color:red;border-radius:5px;font-weight:bold" (click)="addNewUser()">新增品牌</button>
+<table>
+  <tr *ngFor="let user of users">
+    <td>
+      <span (click)="deleteUserByID(user.id)">[删除]</span> ID:{{user.id}}，品牌名称：{{user.name}}，在库数量：{{user.number}}，上市时间：{{user.time}}
+    </td>
+  </tr>
+  </table>
